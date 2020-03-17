@@ -115,7 +115,7 @@ TextureImporter:
         width: 83
         height: 304
       alignment: 9
-      pivot: {x: 0.60499555, y: 0.6958869}
+      pivot: {x: 0.50000036, y: 0.04611407}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -135,7 +135,7 @@ TextureImporter:
         width: 115
         height: 360
       alignment: 9
-      pivot: {x: 0.48736995, y: 0.7783829}
+      pivot: {x: 0.52525955, y: 0.04006246}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -155,7 +155,7 @@ TextureImporter:
         width: 114
         height: 383
       alignment: 9
-      pivot: {x: 0.51274085, y: 0.78821117}
+      pivot: {x: 0.51274085, y: 0.04113722}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -175,7 +175,7 @@ TextureImporter:
         width: 129
         height: 149
       alignment: 9
-      pivot: {x: 0.49999982, y: 0.3830255}
+      pivot: {x: 0.49999982, y: 0.09058928}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -215,7 +215,7 @@ TextureImporter:
         width: 75
         height: 200
       alignment: 9
-      pivot: {x: 0.5968288, y: 0.5871457}
+      pivot: {x: 0.51936567, y: 0.06426941}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -375,7 +375,7 @@ TextureImporter:
         width: 93
         height: 200
       alignment: 9
-      pivot: {x: 0.5468527, y: 0.52178633}
+      pivot: {x: 0.51809, y: 0.036949616}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -390,12 +390,12 @@ TextureImporter:
       name: R_jump6
       rect:
         serializedVersion: 2
-        x: 42
+        x: 41
         y: 174
         width: 137
         height: 373
       alignment: 9
-      pivot: {x: 0.5424068, y: 0.7881502}
+      pivot: {x: 0.51060164, y: 0.032728467}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -410,12 +410,12 @@ TextureImporter:
       name: R_jump7
       rect:
         serializedVersion: 2
-        x: 193
+        x: 192
         y: 175
         width: 125
         height: 363
       alignment: 9
-      pivot: {x: 0.5464778, y: 0.72006553}
+      pivot: {x: 0.49999988, y: 0.035861097}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -435,7 +435,7 @@ TextureImporter:
         width: 124
         height: 344
       alignment: 9
-      pivot: {x: 0.4765736, y: 0.6097766}
+      pivot: {x: 0.48828667, y: 0.031336673}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -494,8 +494,8 @@ TextureImporter:
         y: 172
         width: 132
         height: 192
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.52200687, y: 0.08393836}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -534,9 +534,9 @@ TextureImporter:
         y: 172
         width: 136
         height: 152
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      alignment: 9
+      pivot: {x: 0.4901657, y: 0.05563977}
+      border: {x: 0, y: 4, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
