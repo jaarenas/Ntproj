@@ -3,6 +3,16 @@ using System.Collections;
 
 public class Walk : MonoBehaviour
 {
+    private bool isDashing;
+    public float dashTime;
+    public float dashSpeed;
+    public float distanceBetweenImages;
+    public float dashCooldown;
+    private float dashTimeLeft;
+    private float lastImageXpos;
+    private float lastDash = -100f;
+
+
 
     Animator anim;
     private float moveForce = 3f;
@@ -24,13 +34,15 @@ public class Walk : MonoBehaviour
 
         float move = Input.GetAxis("Horizontal");
         anim.SetFloat("Speed", move);
+
+        CheckDash();
     }
 
     void Movement()
     {
         if (Input.GetKeyDown(KeyCode.LeftControl))
         {
-            moveForce = 10f;
+            moveForce = 20f;
         }
 
         if (Input.GetKey(KeyCode.D))
@@ -66,7 +78,54 @@ public class Walk : MonoBehaviour
         {
             moveForce = 3f;
         }
+
+        if (Input.GetButtonDown("Dash"))
+        {
+            if (Time.time >= (lastDash + dashCooldown))
+                AttemptToDash();
+        }
+
     }
+
+    private void AttemptToDash()
+    {
+        isDashing = true;
+        dashTimeLeft = dashTime;
+        lastDash = Time.time;
+
+        PlayerAfterImagePool.Instance.GetFromPool();
+        lastImageXpos = transform.position.x;
+    }
+
+    private void CheckDash()
+    {
+        if(isDashing)
+        {
+            if(dashTimeLeft > 0)
+            {
+                Translate = false;
+                canFlip = false;
+                RenderBuffer.velocity = new Vector2(dashSpeed * facingDirection, RenderBuffer.velocity.y);
+                dashTimeLeft -= Time.deltaTime;
+
+                if (Mathf.Abs(transform.position.x - lastImageXpos) > distanceBetweenImages)
+                {
+                    PlayerAfterImagePool.Instance.GetComponent();
+                    lastImageXpos = transform.position.x;
+                }
+
+            }
+
+            if(dashTimeLeft <= 0 || isTouchingWall)
+            {
+                isDashing = false;
+                canMove = true;
+                canFlip = true;
+            }
+            
+        }
+    }
+    
 
     private bool IsGrounded()
     {
